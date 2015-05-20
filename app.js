@@ -34,6 +34,11 @@ function onEnableLoopButtonClicked(event){
   enableLoop();
 }
 
+function draw(){
+  ctx.fillStyle = "rgb(0, 0, 0)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
+
 var skip15secButton = document.querySelector("#skip");
 skip15secButton.addEventListener("click",  onSkip15secButtonClicked);
 
@@ -45,3 +50,6 @@ rewindToTopButton.addEventListener("click",  onRewindToTopButtonClicked);
 
 var enableLoopButton = document.querySelector("#enableLoop");
 enableLoopButton.addEventListener("click",  onEnableLoopButtonClicked);
+
+var canvas = document.querySelector("canvas");
+var ctx = canvas.getContext("2d");
